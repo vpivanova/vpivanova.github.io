@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <style>
+html {
+            font-size: 28px; 
+        }
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+	    font-size: 1rem;
+        }
+        header {
+            background-color: #333;
+            color: #00ffff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position:relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+	.bright-red-button {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .bright-red-button:hover {
+      background-color: #cc0000;
+    }
+
+    .bright-red-button:active {
+      background-color: #990000;
+    }
+    .bright-cat-button {
+  background-color: #e67e22; /* Оранжевый цвет */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bright-cat-button:hover {
+  background-color: #d35400;
+}
+
+.bright-cat-button:active {
+  background-color: #c0392b;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+        <p>Мой сладкий, о чем ты думаешь сейчас</p>
+    </header>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+    <main>
+        <h2>Обо мне</h2>
+ <br>
+        <p>Привет! Меня зовут Ника</p>
+ <br>
+        <h2>Мои увелечения</h2>
+        <ul>
+            <li><a href="#">Увлечение 1</a> Играть на гитаре</li>
+            <li><a href="#">Увлечение 2</a> Учиться</li>
+        </ul>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+	<h2 style="color: #800080;">А ты прочти в моих глазах
+Хочу остаться с тобой</h2>
+
+ <br>
+ <br>
+ <br>
+ <br>
+
+<div style="display: flex; gap: 10px;">
+  <button class="bright-cat-button" onclick="window.location.href='ccat.jpg'">Котик!</button>
+</div> 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+        <h2>Контакты</h2>
+        <p>Вы можете связаться со мной по номеру: <a>89236844644</a> но со мной лучше не связываться</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 год</p>
+    </footer>
+    <button class="bright-red-button" id="backToTopBtn" title="Вернуться наверх">Наверх</button>
+
+        <script>
+            // Получаем кнопку
+            let mybutton = document.getElementById("backToTopBtn");
+	    mybutton.style.display = "block";
+
+            // Когда пользователь прокручивает страницу на 20px вниз, показываем кнопку
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // Когда пользователь нажимает на кнопку, прокручиваем страницу вверх
+            mybutton.onclick = function() {
+                document.body.scrollTop = 0; // Для Safari
+                document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE and Opera
+            }
+        </script>
+
+</body>
+</html>
